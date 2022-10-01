@@ -383,15 +383,15 @@
             if (villanoValido(personaRecibida)) {
                 personaRecibida.id = parseInt(personaRecibida.id);
                 personaRecibida.edad = parseInt(personaRecibida.edad);
-                personaRecibida.asesinatos = parseInt(nuevoAlta.asesinatos);
-                personaRecibida.robos = parseInt(nuevoAlta.robos);
+                personaRecibida.asesinatos = parseInt(personaRecibida.asesinatos);
+                personaRecibida.robos = parseInt(personaRecibida.robos);
 
                 //Tiramos a undefine los otros en caso de modificacion de tipo.                
-                nuevoAlta.alterEgo = undefined;
-                nuevoAlta.ciudad = undefined;
-                nuevoAlta.publicado = undefined;
+                personaRecibida.alterEgo = undefined;
+                personaRecibida.ciudad = undefined;
+                personaRecibida.publicado = undefined;
 
-                return nuevoAlta;
+                return personaRecibida;
             }
             else{
                 mensajeAlert += "Hay en un error en la carga de los campos"
